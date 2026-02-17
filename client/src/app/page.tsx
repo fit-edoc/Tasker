@@ -24,7 +24,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[100vh] w-full bg-gradient-to-br from-indigo-50 via-white to-purple-50 rounded-3xl p-8 relative overflow-hidden shadow-xl">
+    <div className="flex flex-col items-center justify-center min-h-[100vh] w-[100vw]  bg-gradient-to-br from-indigo-50 via-white to-purple-50 rounded-3xl p-8 relative overflow-hidden shadow-xl">
       {/* Background Blobs */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
       <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
@@ -34,7 +34,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center relative z-10"
+        className="text-center relative z-10 mt-12 lg:mt-0"
       >
         <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight">
           Master Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-black/70">Tasks</span>

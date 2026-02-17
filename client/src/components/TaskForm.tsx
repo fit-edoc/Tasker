@@ -33,7 +33,7 @@ const TaskForm = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={() => setIsOpen(true)}
-                        className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-sm"
+                        className="flex items-center gap-2 bg-amber-300 text-white px-4 py-2 rounded-xl hover:bg-amber-700 transition-colors shadow-sm"
                     >
                         <Plus size={20} />
                         Add New Task

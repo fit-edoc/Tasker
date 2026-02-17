@@ -36,13 +36,13 @@ const RegisterPage = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-[calc(100vh-100px)] bg-gray-50">
+        <div className="flex items-center justify-center min-h-[100vh] w-[100vw]  rounded-2xl bg-gray-50">
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden"
             >
-                <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-8 text-center">
+                <div className="bg-linear-to-r from-purple-600  via-black  to-purple-600 p-8 text-center">
                     <h2 className="text-3xl font-bold text-white mb-2">Create Account</h2>
                     <p className="text-purple-100">Join us to start managing your tasks</p>
                 </div>
@@ -54,7 +54,7 @@ const RegisterPage = () => {
                             <input
                                 {...register('username', { required: 'Username is required' })}
                                 type="text"
-                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
+                                className="w-full px-4 py-3 rounded-3xl border text-black border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
                                 placeholder="John Doe"
                             />
                             {errors.username && <span className="text-xs text-red-500 mt-1">{errors.username.message as string}</span>}
@@ -65,7 +65,7 @@ const RegisterPage = () => {
                             <input
                                 {...register('email', { required: 'Email is required' })}
                                 type="email"
-                                className="w-full px-4 py-3 rounded-lg border text-black border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
+                                className="w-full px-4 py-3 rounded-3xl border text-black border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
                                 placeholder="you@example.com"
                             />
                             {errors.email && <span className="text-xs text-red-500 mt-1">{errors.email.message as string}</span>}
@@ -76,7 +76,7 @@ const RegisterPage = () => {
                             <input
                                 {...register('password', { required: 'Password is required', minLength: { value: 6, message: 'Password must be at least 6 characters' } })}
                                 type="password"
-                                className="w-full px-4 py-3 rounded-lg border text-black border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
+                                className="w-full px-4 py-3 rounded-3xl border text-black border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
                                 placeholder="••••••••"
                             />
                             {errors.password && <span className="text-xs text-red-500 mt-1">{errors.password.message as string}</span>}
@@ -85,7 +85,7 @@ const RegisterPage = () => {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full flex items-center justify-center py-3 px-4 rounded-lg shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 disabled:opacity-50 transition-colors"
+                            className="w-full flex items-center justify-center py-3 px-4 rounded-3xl shadow-sm text-sm font-medium text-white bg-linear-to-r from-black   to-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 disabled:opacity-50 transition-colors"
                         >
                             {isLoading ? <Loader2 className="animate-spin mr-2" /> : <UserPlus className="mr-2" />}
                             {isLoading ? 'Creating Account...' : 'Register'}
