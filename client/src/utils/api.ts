@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://tasker-9tlq.onrender.com',
+    baseURL: 'https://tasker-9tlq.onrender.com/api',
     headers: {
         'Content-Type': 'application/json',
     },
